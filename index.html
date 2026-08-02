@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahastransh Tiwari | AI & ML Engineer</title>
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-main: #1f2937;
+            --text-light: #4b5563;
+            --bg-color: #f9fafb;
+            --white: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--white);
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            background-color: var(--white);
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .social-links a:hover {
+            background-color: var(--bg-color);
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 30px;
+            color: var(--text-main);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        /* About & Summary */
+        .summary {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 800px;
+        }
+
+        /* Skills Matrix */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .skill-category ul {
+            list-style-type: none;
+        }
+
+        .skill-category li {
+            margin-bottom: 8px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Projects */
+        .project-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .tech-stack {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .project-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-link {
+            display: inline-block;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Experience & Lists */
+        .list-item {
+            margin-bottom: 25px;
+        }
+
+        .list-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .list-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        /* Custom link styling for certificates */
+        .cert-link {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            background-color: #eff6ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #bfdbfe;
+            text-decoration: none;
+        }
+
+        .cert-link:hover {
+            background-color: #dbeafe;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--white);
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .social-links { flex-wrap: wrap; }
+            .project-header { flex-direction: column; align-items: flex-start; }
+            .project-header .btn-link { margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header>
+        <div class="container">
+            <h1>Shahastransh Tiwari</h1>
+            <h2>Aspiring Software Developer/AI & Machine Learning Engineer</h2>
+            <div class="social-links">
+                <a href="mailto:shahastranshtiwari@gmail.com" target="_blank">Email Me</a>
+                <a href="http://www.linkedin.com/in/shahastransh-tiwari-636200289" target="_blank">LinkedIn</a>
+                <a href="https://github.com/shahastransh" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/u/shahastransh/" target="_blank">LeetCode</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary">
+                I am an aspiring engineer with a strong technical foundation in Machine Learning and Deep Learning, proficient in C++ and Python. Beyond building predictive models with NumPy and Pandas, I am eager to understand the full software development lifecycle—from writing clean, scalable code to implementing robust system architectures. My goal is to bridge the gap between AI research and production-ready software engineering while contributing to innovative team projects.
+            </p>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>HTML / CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>AI & Machine Learning</h3>
+                    <ul>
+                        <li>Neural Networks</li>
+                        <li>LLM Integration (GPT-4o, Phi-4)</li>
+                        <li>TensorFlow (Keras)</li>
+                        <li>Scikit-learn, SMOTE, SHAP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Automation & Scrapers</h3>
+                    <ul>
+                        <li>Selenium WebDriver</li>
+                        <li>BeautifulSoup4</li>
+                        <li>LangChain</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Fundamentals</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Streamlit, Pandas, NumPy</li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Object-Oriented Programming</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">AI-WEB-SCRAPER</h3>
+                    <a href="https://github.com/shahastransh/AI-WEB-SCRAPER" class="btn-link" target="_blank">View Repository →</a>
+                </div>
+                <span class="tech-stack">Python, Langchain, Ollama, Selenium, BeautifulSoup4, Streamlit</span>
+                <p class="project-desc">
+                    Built a dynamic data extraction and modular LLM orchestration pipeline integrating Selenium, BeautifulSoup4, and LangChain to process JavaScript-heavy DOM content. Leveraged local Phi-4-mini models via Ollama for private, cost-efficient semantic extraction, delivered through an optimized Streamlit interface featuring intelligent text-chunking, data-cleaning, and real-time natural language queries for large-scale web pages.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Fraud Detection Strategy Lab</h3>
+                    <a href="https://github.com/shahastransh/Fraud-Detection-Strategy-Lab" class="btn-link" target="_blank">View Repository →</a>
+                </div>
+                <span class="tech-stack">Streamlit, SHAP, Keras, Scikit-learn, SMOTE</span>
+                <p class="project-desc">
+                    Engineered a robust fraud detection pipeline, resolving the "Accuracy Paradox" in imbalanced datasets via SMOTE and Undersampling to boost recall. Executed automated grid-search benchmarking across Random Forest, Neural Networks (Keras), and Custom KNN to maximize F1-Score. Enhanced model explainability using SHAP and developed a Financial Impact Simulator to directly translate ML predictive metrics into estimated real-world monetary savings.
+                </p>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE & PUBLICATION SECTION -->
+        <section id="experience">
+            <h2 class="section-title">Experience & Publications</h2>
+            
+            <div class="list-item">
+                <h3>IBM Summer Training – Generative AI <a href="https://drive.google.com/file/d/1QXdRU1AD56VUjemaFc8fV3xtsz8Y8saY/view?usp=drive_link" target="_blank" class="cert-link">View Certificate</a></h3>
+                <p class="list-meta">AI/ML Trainee | Jun 2025 – Jul 2025</p>
+                <p>Completed 80-hour GenAI/ML training; built a Fraud Detection Strategy Lab using Random Forest, Keras Neural Networks, and Custom KNN for model evaluation.</p>
+            </div>
+
+            <div class="list-item">
+                <h3>A Review Paper on Classification Models <a href="https://drive.google.com/file/d/1ASsRUiwSneHdNilRjDM1BRM2XDPyPB7Z/view?usp=sharing" target="_blank" class="cert-link">View Publication</a></h3>
+                <p class="list-meta">ISJEM, Volume 04 Issue: 05 | May – 2025</p>
+                <p>Co-authored a paper comparing machine learning classifiers (Logistic Regression, SVM, KNN, Random Forest), evaluating interpretability, accuracy, and efficiency to determine optimal use cases.</p>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <div class="skills-grid">
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 12px; margin-top: 5px;">
+                        <li><strong>Basics of Python</strong> - Infosys Springboard <a href="https://drive.google.com/file/d/1467x5dQMKzA-cNKArRcAPfzuqSJErNUv/view?usp=drive_link" target="_blank" class="cert-link">Certificate</a></li>
+                        
+                        <li><strong>Python Foundation</strong> - Infosys Springboard <a href="https://drive.google.com/file/d/1bMEAixIVyi8FK2Rm3INx7qHvvgT9ytWE/view?usp=drive_link" target="_blank" class="cert-link">Certificate</a></li>
+                        
+                        <li><strong>Programming Fundamentals (Python)</strong> - Infosys Springboard 
+                            <a href="https://drive.google.com/file/d/1QXqyhAznB5zvKl1s0wHuiGF9-AamUMA5/view?usp=drive_link" target="_blank" class="cert-link">Part 1</a> 
+                            <a href="https://drive.google.com/file/d/1IRhrIq3ZbJofpBA7laFoa8S2tlM105RF/view?usp=drive_link" target="_blank" class="cert-link">Part 2</a>
+                        </li>
+                        
+                        <li><strong>Object Oriented Programming (Python)</strong> - Infosys Springboard <a href="https://drive.google.com/file/d/1nOrIFaPATxQL-1PSQcMCo7nQVcAVmm8x/view?usp=drive_link" target="_blank" class="cert-link">Certificate</a></li>
+                        
+                        <li><strong>Database Management System</strong> - Infosys Springboard 
+                            <a href="https://drive.google.com/file/d/1zPPJCuz6fsxKuBuUqkE0QSLMCUuNTblv/view?usp=drive_link" target="_blank" class="cert-link">Part 1</a>
+                            <a href="https://drive.google.com/file/d/1PzDM2I_8WvxbIRneGuRKC9jMYmKNauZo/view?usp=drive_link" target="_blank" class="cert-link">Part 2</a>
+                        </li>
+                        
+                        <li><strong>Introduction to NoSQL databases</strong> - Infosys Springboard <a href="https://drive.google.com/file/d/1SOphEiUYpeJSoZwJj1G_ib2h6ql1u9sv/view?usp=drive_link" target="_blank" class="cert-link">Certificate</a></li>
+                        
+                        <li><strong>Software Engineering & Agile Development</strong> - Infosys Springboard <a href="https://drive.google.com/file/d/19dM-5borTrHkGOOTDDFGhxGuJVtEd-Uq/view?usp=drive_link" target="_blank" class="cert-link">Certificate</a></li>
+                        
+                        <li><strong>Agile Scrum in Practice</strong> - Infosys Springboard <a href="https://drive.google.com/file/d/1rQjBVuy0ffERYllBBUKzjS1sWUpWOkEU/view?usp=drive_link" target="_blank" class="cert-link">Certificate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="list-item">
+                <h3>Akhilesh Das Gupta Institute of Professional Studies, New Delhi</h3>
+                <p class="list-meta">Artificial Intelligence & Machine Learning (Till 5th Semester) | Expected 2026 | CGPA: 8.75</p>
+            </div>
+
+            <div class="list-item">
+                <h3>DAV Public School, Jasola Vihar</h3>
+                <p class="list-meta">XII (CBSE) | 2022 | 82%</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Shahastransh Tiwari. Designed for deployment.</p>
+    </footer>
+
+</body>
+</html>
