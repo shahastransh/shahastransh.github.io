@@ -71,6 +71,7 @@
         .social-links {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 20px;
         }
@@ -168,6 +169,11 @@
             font-size: 1.25rem;
             font-weight: 600;
         }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
 
         .tech-stack {
             font-size: 0.85rem;
@@ -241,8 +247,8 @@
         @media (max-width: 600px) {
             header h1 { font-size: 2rem; }
             .social-links { flex-wrap: wrap; }
-            .project-header { flex-direction: column; align-items: flex-start; }
-            .project-header .btn-link { margin-top: 10px; }
+            .project-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .project-header .btn-link { margin-top: 5px; }
         }
     </style>
 </head>
@@ -255,6 +261,7 @@
             <h2>Aspiring Software Developer/AI & Machine Learning Engineer</h2>
             <div class="social-links">
                 <a href="mailto:shahastranshtiwari@gmail.com" target="_blank">Email Me</a>
+                <a href="tel:+917048930124">(+91) 7048930124</a>
                 <a href="http://www.linkedin.com/in/shahastransh-tiwari-636200289" target="_blank">LinkedIn</a>
                 <a href="https://github.com/shahastransh" target="_blank">GitHub</a>
                 <a href="https://leetcode.com/u/shahastransh/" target="_blank">LeetCode</a>
@@ -268,7 +275,7 @@
         <section id="about">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                I am an aspiring engineer with a strong technical foundation in Machine Learning and Deep Learning, proficient in C++ and Python. Beyond building predictive models with NumPy and Pandas, I am eager to understand the full software development lifecycle—from writing clean, scalable code to implementing robust system architectures. My goal is to bridge the gap between AI research and production-ready software engineering while contributing to innovative team projects.
+                I am an aspiring engineer with a strong technical foundation in Machine Learning and Deep Learning, proficient in C++ and Python. Beyond building predictive models with NumPy and Pandas, I am eager to understand the full software development lifecycle, from writing clean, scalable code to implementing robust system architectures. My goal is to bridge the gap between Al research and production-ready software engineering while contributing to innovative team projects.
             </p>
         </section>
 
@@ -288,9 +295,10 @@
                     <h3>AI & Machine Learning</h3>
                     <ul>
                         <li>Neural Networks</li>
-                        <li>LLM Integration (GPT-4o, Phi-4)</li>
+                        <li>LLM Integration</li>
+                        <li>Scikit-learn</li>
                         <li>TensorFlow (Keras)</li>
-                        <li>Scikit-learn, SMOTE, SHAP</li>
+                        <li>SMOTE & SHAP</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -298,16 +306,26 @@
                     <ul>
                         <li>Selenium WebDriver</li>
                         <li>BeautifulSoup4</li>
-                        <li>LangChain</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Fundamentals</h3>
+                    <h3>Tools & Frameworks</h3>
                     <ul>
+                        <li>LangChain</li>
+                        <li>Streamlit</li>
+                        <li>Pandas & NumPy</li>
                         <li>Git & GitHub</li>
-                        <li>Streamlit, Pandas, NumPy</li>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Object-Oriented Programming</li>
+                    </ul>
+                </div>
+                <div class="skill-category" style="grid-column: 1 / -1;">
+                    <h3>CS Fundamentals & Problem Solving</h3>
+                    <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+                        <li>Data Structures & Algorithms (Solved 250+ questions on LeetCode)</li>
+                        <li>Object-Oriented Programming (OOPS)</li>
+                        <li>Database Management Systems (DBMS)</li>
+                        <li>Computer Networks</li>
+                        <li>Operating Systems</li>
+                        <li>Computer Architecture</li>
                     </ul>
                 </div>
             </div>
@@ -320,11 +338,16 @@
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">AI-WEB-SCRAPER</h3>
-                    <a href="https://github.com/shahastransh/AI-WEB-SCRAPER" class="btn-link" target="_blank">View Repository →</a>
+                    <div class="project-links">
+                        <a href="https://github.com/shahastransh/AI-WEB-SCRAPER" class="btn-link" target="_blank">GitHub →</a>
+                        <a href="#" class="btn-link" target="_blank">Live App →</a> <!-- Replace # with actual live link -->
+                    </div>
                 </div>
-                <span class="tech-stack">Python, Langchain, Ollama, Selenium, BeautifulSoup4, Streamlit</span>
+                <span class="tech-stack">Python, Lang Chain, Groq API (Llama 3.3), Selenium, Streamlit</span>
                 <p class="project-desc">
-                    Built a dynamic data extraction and modular LLM orchestration pipeline integrating Selenium, BeautifulSoup4, and LangChain to process JavaScript-heavy DOM content. Leveraged local Phi-4-mini models via Ollama for private, cost-efficient semantic extraction, delivered through an optimized Streamlit interface featuring intelligent text-chunking, data-cleaning, and real-time natural language queries for large-scale web pages.
+                    Architected and deployed an end-to-end AI-powered web-scraping pipeline that extracts, sanitizes, and structures dynamic, JavaScript-heavy DOM content using Selenium and BeautifulSoup4.<br><br>
+                    Orchestrated natural language data extraction by integrating LangChain with high-throughput Groq Cloud LLMs (Llama 3.3 70B), implementing token-efficient text chunking (6,000-character windows), strict prompt templates, and a dynamic multi-model failover mechanism.<br><br>
+                    Delivered the entire system as a cloud-hosted, interactive Streamlit application configured for headless Linux environments with automated driver management and secure secret orchestration.
                 </p>
             </div>
 
@@ -335,7 +358,9 @@
                 </div>
                 <span class="tech-stack">Streamlit, SHAP, Keras, Scikit-learn, SMOTE</span>
                 <p class="project-desc">
-                    Engineered a robust fraud detection pipeline, resolving the "Accuracy Paradox" in imbalanced datasets via SMOTE and Undersampling to boost recall. Executed automated grid-search benchmarking across Random Forest, Neural Networks (Keras), and Custom KNN to maximize F1-Score. Enhanced model explainability using SHAP and developed a Financial Impact Simulator to directly translate ML predictive metrics into estimated real-world monetary savings.
+                    Engineered a robust fraud detection pipeline, resolving the "Accuracy Paradox" in imbalanced datasets via SMOTE and Undersampling to boost recall.<br><br>
+                    Executed automated grid-search benchmarking across Random Forest, Neural Networks (Keras), and Custom KNN to maximize F1-Score.<br><br>
+                    Enhanced model explainability using SHAP and developed a Financial Impact Simulator to directly translate ML predictive metrics into estimated real-world monetary savings.
                 </p>
             </div>
         </section>
@@ -346,14 +371,15 @@
             
             <div class="list-item">
                 <h3>IBM Summer Training – Generative AI <a href="https://drive.google.com/file/d/1QXdRU1AD56VUjemaFc8fV3xtsz8Y8saY/view?usp=drive_link" target="_blank" class="cert-link">View Certificate</a></h3>
-                <p class="list-meta">AI/ML Trainee | Jun 2025 – Jul 2025</p>
+                <p class="list-meta">AI/ML Trainee | Jun 2025 – Jul 2025 (80 Hours)</p>
                 <p>Completed 80-hour GenAI/ML training; built a Fraud Detection Strategy Lab using Random Forest, Keras Neural Networks, and Custom KNN for model evaluation.</p>
             </div>
 
             <div class="list-item">
                 <h3>A Review Paper on Classification Models <a href="https://drive.google.com/file/d/1ASsRUiwSneHdNilRjDM1BRM2XDPyPB7Z/view?usp=sharing" target="_blank" class="cert-link">View Publication</a></h3>
-                <p class="list-meta">ISJEM, Volume 04 Issue: 05 | May – 2025</p>
-                <p>Co-authored a paper comparing machine learning classifiers (Logistic Regression, SVM, KNN, Random Forest), evaluating interpretability, accuracy, and efficiency to determine optimal use cases.</p>
+                <p class="list-meta">ISJEM, Volume 04 Issue: 05 | DOI: 10.55041/ISJEM03731 | May 2025</p>
+                <p><strong>Authors:</strong> Shuchi Sharma, Abhishek, Shahastransh Tiwari, Akash Kumar</p>
+                <p>Compared machine learning classifiers (Logistic Regression, SVM, KNN, Random Forest), evaluating interpretability, accuracy, and efficiency to determine optimal use cases.</p>
             </div>
         </section>
 
@@ -395,12 +421,12 @@
             
             <div class="list-item">
                 <h3>Akhilesh Das Gupta Institute of Professional Studies, New Delhi</h3>
-                <p class="list-meta">Artificial Intelligence & Machine Learning (Till 5th Semester) | Expected 2026 | CGPA: 8.85</p>
+                <p class="list-meta">B.Tech in CSE (AI-ML) | CGPA: 8.85 (Till 6th Semester) | 2023 - 2027</p>
             </div>
 
             <div class="list-item">
-                <h3>DAV Public School, Jasola Vihar</h3>
-                <p class="list-meta">XII (CBSE) | 2022 | 82%</p>
+                <h3>DAV Public School, Jasola Vihar, New Delhi</h3>
+                <p class="list-meta">Class XII (CBSE) Aggregate: 82% | 2022</p>
             </div>
         </section>
 
