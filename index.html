@@ -275,7 +275,7 @@
         <section id="about">
             <h2 class="section-title">Professional Summary</h2>
             <p class="summary">
-                I am an aspiring engineer with a strong technical foundation in Machine Learning and Deep Learning, proficient in C++ and Python. Beyond building predictive models with NumPy and Pandas, I am eager to understand the full software development lifecycle, from writing clean, scalable code to implementing robust system architectures. My goal is to bridge the gap between Al research and production-ready software engineering while contributing to innovative team projects.
+                I am an aspiring engineer with a strong technical foundation in Machine Learning and Deep Learning, proficient in C++ and Python. Beyond building predictive models with NumPy and Pandas, I am eager to understand the full software development lifecycle, from writing clean, scalable code to implementing robust system architectures. My goal is to bridge the gap between AI research and production-ready software engineering while contributing to innovative team projects.
             </p>
         </section>
 
@@ -313,6 +313,7 @@
                     <ul>
                         <li>LangChain</li>
                         <li>Streamlit</li>
+                        <li>Next.js & FastAPI</li>
                         <li>Pandas & NumPy</li>
                         <li>Git & GitHub</li>
                     </ul>
@@ -334,6 +335,22 @@
         <!-- PROJECTS SECTION -->
         <section id="projects">
             <h2 class="section-title">Featured Projects</h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Chat With Your Document (RAG)</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/shahastransh/Chat-with-your-documents" class="btn-link" target="_blank">GitHub →</a>
+                        <a href="https://chat-with-your-documents-nine.vercel.app/" class="btn-link" target="_blank">Live App →</a>
+                    </div>
+                </div>
+                <span class="tech-stack">Next.js, FastAPI, LangChain, Groq, ChromaDB</span>
+                <p class="project-desc">
+                    Architected a full-stack Retrieval-Augmented Generation (RAG) platform enabling users to extract instant, context-aware insights from uploaded PDF and DOCX files via natural language queries.<br><br>
+                    Engineered a decoupled architecture integrating a Next.js frontend with a FastAPI backend, utilizing LangChain for text chunking, ChromaDB for vector search, and Groq LLMs for rapid synthesis.<br><br>
+                    Overcame strict backend memory constraints (512MB RAM cap) by offloading dense ML vectorization tasks to the Hugging Face Serverless Inference API, eliminating out-of-memory server crashes.
+                </p>
+            </div>
             
             <div class="project-card">
                 <div class="project-header">
@@ -343,7 +360,7 @@
                         <a href="https://ai-web-scraper-fz2f4dxkkuvnwkdxjhmccz.streamlit.app/" class="btn-link" target="_blank">Live App →</a>
                     </div>
                 </div>
-                <span class="tech-stack">Python, Lang Chain, Groq API (Llama 3.3), Selenium, Streamlit</span>
+                <span class="tech-stack">Python, LangChain, Groq API (Llama 3.3), Selenium, Streamlit</span>
                 <p class="project-desc">
                     Architected and deployed an end-to-end AI-powered web-scraping pipeline that extracts, sanitizes, and structures dynamic, JavaScript-heavy DOM content using Selenium and BeautifulSoup4.<br><br>
                     Orchestrated natural language data extraction by integrating LangChain with high-throughput Groq Cloud LLMs (Llama 3.3 70B), implementing token-efficient text chunking (6,000-character windows), strict prompt templates, and a dynamic multi-model failover mechanism.<br><br>
